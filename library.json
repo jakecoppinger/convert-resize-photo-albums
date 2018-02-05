@@ -1,0 +1,8 @@
+{
+    "conversion_program": "/Users/Jake/repos/edited-raw-to-jpeg/edited-raw-to-jpeg",
+    "album_path":"/Users/Jake/Pictures/Photos/Jake's Photos/website-albums/",
+    "converted_dir": "converted/",
+    "processed_dir": "/Users/Jake/repos/personal-photos/src/static/img/",
+    "sizes": [1920, 1080, 720, 480, 300],
+    "quality":70
+}
