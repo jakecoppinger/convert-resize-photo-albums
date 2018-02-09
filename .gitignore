@@ -1,2 +1,4 @@
 converted/*
 !converted/.gitkeep
+
+.DS_Store

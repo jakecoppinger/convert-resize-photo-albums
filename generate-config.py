@@ -29,18 +29,16 @@ for album in albumNames:
 
     rawFilenames = [file for file in albumFiles if validDNG(file)]
     basenames = [fname.split('.')[0] for fname in rawFilenames]
-    filenames = [fname + hardcodedExtension for fname in basenames]
+    # filenames = [fname + hardcodedExtension for fname in basenames]
 
     albumObj = {}
     albumObj['raw_filenames'] = rawFilenames
-    albumObj['filenames'] = filenames
+    albumObj['basenames'] = basenames
 
     if infoFilename in albumFiles:
-        info = yaml.load(open(albumPath + '/' + infoFilename))
-        if 'cover' in info:
-            info['cover'] += '.jpg'
-        albumObj['info'] = info
-        
+        albumObj['info'] = yaml.load(open(albumPath + '/' + infoFilename))
+    
+    # if not ('hidden' in albumObj['info'] and albumObj['info']['hidden'] == True):
     newData['albums'][album] = albumObj
     
 prettyPrint(newData)
