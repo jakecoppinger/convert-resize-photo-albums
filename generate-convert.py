@@ -29,6 +29,7 @@ for album in data['albums']:
     albumGenerated = os.path.isdir(outputFolder)
 
     if not albumGenerated:
+        commands.append('echo "Converting ' + album + '..."')
         inputFolder = albumPath + album + '/'
         commands.append('mkdir "' + outputFolder + '"')
         commands.append(conversionProgram + ' "' + inputFolder + '" "' + outputFolder + '"' )

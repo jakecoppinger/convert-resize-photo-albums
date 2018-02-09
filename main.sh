@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 config=$(./generate-config.py)
 
@@ -8,7 +9,7 @@ convert=$(echo "${config}" | ./generate-convert.py)
 echo "${convert}" | bash
 
 # Delete old resized images
-rm -r ~/repos/photo-website/static/img/*
+# rm -r ~/repos/photo-website/static/img/*
 
 # Run resize
 ./generate-resize.py | bash
