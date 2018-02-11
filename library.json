@@ -3,6 +3,14 @@
     "album_path":"/Users/Jake/Pictures/Photos/Jake's Photos/website-albums/",
     "converted_dir": "converted/",
     "processed_dir": "/Users/Jake/repos/photo-website/static/img",
-    "sizes": [1920, 1080, 720, 480, 300],
-    "quality":70
+    "sizes": [2000, 1800, 1600, 1400, 1200, 1000, 900, 800, 700, 500, 400, 300],
+    "fallback_size":1400,
+    "quality":60,
+    "album_order": [
+        "Water, Part 1, 2018",
+        "Steam Trains at Central 2017",
+        "Waterfall Stars pt. 2 2017",
+        "Surprise Fireworks 2017",
+        "Hawskbury River 2017"
+    ]
 }

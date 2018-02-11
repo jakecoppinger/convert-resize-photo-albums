@@ -16,12 +16,15 @@ hardcodedExtension = '.jpg'
 
 libraryConfig = json.load(open('library.json'))
 path = libraryConfig['album_path']
-sizes = libraryConfig['sizes']
+
 
 albumNames = [folder for folder in os.listdir(path) if folder[0] != '.']
 newData = {}
 newData['albums'] = {}
-newData['sizes'] = sizes
+
+newData['sizes'] = libraryConfig['sizes']
+newData['album_order'] = libraryConfig['album_order']
+newData['fallback_size'] = libraryConfig['fallback_size']
 
 for album in albumNames:
     albumPath = path + '/' + album
