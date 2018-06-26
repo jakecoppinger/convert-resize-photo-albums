@@ -25,18 +25,23 @@ commands = [
 ]
 
 for album in data['albums']:
-    outputFolder = cwd + '/' + convertedDir + album + '/'
+    outputFolder = convertedDir + album + '/'
     albumGenerated = os.path.isdir(outputFolder)
-
+    #albumGenerated = 0 
     if not albumGenerated:
         commands.append('echo "Converting ' + album + '..."')
         inputFolder = albumPath + album + '/'
         commands.append('mkdir "' + outputFolder + '"')
         commands.append(conversionProgram + ' "' + inputFolder + '" "' + outputFolder + '"' )
+        commands.append(f'pwd')
+        commands.append(f'./generate-album-resize.py "{album}" | bash')
         commands.append('')
+        
+
+
     else:
         commands.append('echo "Album ' + album + ' already converted, skipping."')
 
-commands.append("echo 'Done.'")
+commands.append("echo 'Done converting.'")
 
 print("\n".join(commands))

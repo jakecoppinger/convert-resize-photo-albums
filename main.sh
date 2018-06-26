@@ -12,9 +12,10 @@ echo "${convert}" | bash
 # rm -r ~/repos/photo-website/static/img/*
 
 # Run resize
-./generate-resize.py | bash
+#./generate-resize.py | bash
 
 # Copy config
+echo "Copying config json file to data/ of website..."
 ./generate-config.py > ~/repos/photo-website/data/config.json
 
 echo "Done."
