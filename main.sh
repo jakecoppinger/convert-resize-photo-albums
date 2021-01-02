@@ -3,10 +3,10 @@ set -e
 
 config=$(./generate-config.py)
 
-convert=$(echo "${config}" | ./generate-convert.py)
+#convert=$(echo "${config}" | ./generate-convert.py)
 
 # Run conversion
-echo "${convert}" | bash
+#echo "${convert}" | bash
 
 # Delete old resized images
 # rm -r ~/repos/photo-website/static/img/*
